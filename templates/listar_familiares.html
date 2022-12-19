@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+<div>
+    <ul>
+        {% for familiar in familiares %}
+        <li>{{ familiar.id }}, {{ familiar.nombre }}, {{  familiar.edad }}, {{ familiar.fecha_nacimiento }} <a href=./modificar/{{familiar.id}}>Editar</a> <a href=./eliminar/{{familiar.id}}>Eliminar</a></li>
+        {% endfor %}
+    </ul>
+    <a href="./crear">Crear familiar</a>
+</div>
+{% endblock %}

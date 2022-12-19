@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block contenido %}
+<div>
+    <form action="{% url 'crear' %}" method="post"> {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Crear familiar">
+    </form>
+    <a href="./listar">regresar</a>
+</div>
+{% endblock %}
